@@ -10,7 +10,7 @@ export default function HomSection() {
 
                         {/* 1. Savings in Cost */}
                         <div className="flex items-start space-x-3">
-                            <svg className="w-8 h-8 flex-shrink-0 pt-2" viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" strokeWidth="1.5">
+                            <svg className="w-8 h-8 flex-shrink-0 pt-3" viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" strokeWidth="1.5">
                                 <defs>
                                     <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
                                         <stop offset="0%" stopColor="#4f46e5" />
@@ -27,7 +27,7 @@ export default function HomSection() {
 
                         {/* 2. Reduction in Hours Spent */}
                         <div className="flex items-start space-x-3">
-                            <svg className="w-8 h-8 flex-shrink-0 pt-2" viewBox="0 0 24 24" fill="none" stroke="url(#grad2)" strokeWidth="1.5">
+                            <svg className="w-8 h-8 flex-shrink-0 pt-3" viewBox="0 0 24 24" fill="none" stroke="url(#grad2)" strokeWidth="1.5">
                                 <defs>
                                     <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
                                         <stop offset="0%" stopColor="#4f46e5" />
@@ -44,7 +44,7 @@ export default function HomSection() {
 
                         {/* 3. Users Across Countries */}
                         <div className="flex items-start space-x-3">
-                            <svg className="w-8 h-8 flex-shrink-0 pt-2" viewBox="0 0 24 24" fill="none" stroke="url(#grad3)" strokeWidth="1.5">
+                            <svg className="w-8 h-8 flex-shrink-0 pt-3" viewBox="0 0 24 24" fill="none" stroke="url(#grad3)" strokeWidth="1.5">
                                 <defs>
                                     <linearGradient id="grad3" x1="0" y1="0" x2="1" y2="1">
                                         <stop offset="0%" stopColor="#4f46e5" />
@@ -62,7 +62,7 @@ export default function HomSection() {
 
                         {/* 4. Content Generated */}
                         <div className="flex items-start space-x-3">
-                            <svg className="w-8 h-8 flex-shrink-0 pt-2" viewBox="0 0 24 24" fill="none" stroke="url(#grad4)" strokeWidth="1.5">
+                            <svg className="w-8 h-8 flex-shrink-0 pt-3" viewBox="0 0 24 24" fill="none" stroke="url(#grad4)" strokeWidth="1.5">
                                 <defs>
                                     <linearGradient id="grad4" x1="0" y1="0" x2="1" y2="1">
                                         <stop offset="0%" stopColor="#4f46e5" />
@@ -83,19 +83,27 @@ export default function HomSection() {
             {/* Trusted Companies */}
             <section className="mt-10 px-4">
                 <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center sm:justify-between gap-4 opacity-70 text-center sm:text-left">
-                    <span className="text-lg sm:text-xl font-semibold text-slate-500 tracking-wide">SEMRUSH</span>
-                    <div className="flex items-center">
-                        <span className="text-lg sm:text-xl font-semibold text-slate-500 italic">ICICI</span>
-                        <span className="text-lg sm:text-xl font-light text-slate-500 ml-1">Bank</span>
-                    </div>
-                    <span className="text-lg sm:text-xl font-semibold text-slate-500 tracking-wide">HYATT</span>
-                    <span className="text-lg sm:text-xl font-light text-slate-500">indegene</span>
-                    <span className="text-lg sm:text-xl font-light text-slate-500">dentsu</span>
-                    <span className="text-lg sm:text-xl font-semibold text-slate-500 tracking-wide">TCS</span>
-                    <span className="text-lg sm:text-xl font-semibold text-slate-500 tracking-wide">WIPRO</span>
-                    <span className="text-lg sm:text-xl font-semibold text-slate-500 tracking-wide">HDFC</span>
+                    {[
+                        { name: "SEMRUSH", style: "font-semibold tracking-wide" },
+                        { name: "ICICI Bank", style: "font-semibold italic" },
+                        { name: "HYATT", style: "font-semibold tracking-wide" },
+                        { name: "indegene", style: "font-light" },
+                        { name: "dentsu", style: "font-light" },
+                        { name: "TCS", style: "font-semibold tracking-wide" },
+                        { name: "WIPRO", style: "font-semibold tracking-wide" },
+                        { name: "HDFC", style: "font-semibold tracking-wide" },
+                    ].map((brand, idx) => (
+                        <span
+                            key={idx}
+                            className={`text-lg sm:text-xl text-slate-500 ${brand.style} transition-all duration-300 ease-in-out transform hover:scale-110 cursor-pointer hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 hover:text-transparent hover:bg-clip-text`}
+                        >
+                            {brand.name}
+                        </span>
+                    ))}
                 </div>
             </section>
+
+
         </div>
     );
 }
