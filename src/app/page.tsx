@@ -12,26 +12,26 @@ import { FaGoogle, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa"
 export default function HomePage() {
   return (
     <>
-      <main className="">
+      <main className="bg-gradient-to-br from-slate-50 via-white to-slate-100 py-16">
         <div className="flex flex-col items-center text-center mx-auto">
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 mb-4 max-w-[90%] mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-4 max-w-[90%] mx-auto">
             Skyrocket Engagement with
           </h1>
 
           {/* Gradient Text */}
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-8 max-w-[90%] mx-auto">
-            <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-indigo-600 via-blue-600 to-teal-600 bg-clip-text text-transparent">
               AI-Powered Designs
             </span>
-            <span className="text-slate-800"> & </span>
-            <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="text-slate-900"> & </span>
+            <span className="bg-gradient-to-r from-indigo-600 via-blue-600 to-teal-600 bg-clip-text text-transparent">
               Smart Scheduling
             </span>
           </h2>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl px-4">
+          <p className="text-lg sm:text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl px-4">
             Quickly make video ads, product ads & posts. Boost CTRs and ROAS with our AI AD generator.
           </p>
 
@@ -40,23 +40,23 @@ export default function HomePage() {
             {/* Social Icons and CTA Button in Row */}
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-8">
               {/* Social Icons */}
-              <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <FaGoogle className="text-white text-xl" />
               </div>
-              <div className="w-12 h-12 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-tr from-pink-500 via-purple-500 to-indigo-500 rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <FaInstagram className="text-white text-xl" />
               </div>
-              <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <FaYoutube className="text-white text-xl" />
               </div>
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <FaFacebook className="text-white text-xl" />
               </div>
 
               {/* CTA Button */}
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-500 to-pink-500 hover:from-blue-600 hover:to-pink-600 text-white font-semibold px-8 py-4 text-lg rounded-full"
+                className="bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
               >
                 Generate your Ad!
               </Button>
@@ -64,17 +64,17 @@ export default function HomePage() {
 
             {/* Reviews */}
             <div className="flex flex-col sm:flex-row items-center gap-2 mb-8">
-              <div className="flex text-yellow-400">
+              <div className="flex text-amber-400">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-xl">★</span>
                 ))}
               </div>
-              <span className="text-gray-600 font-medium">3k+ Reviews</span>
+              <span className="text-slate-600 font-medium">3k+ Reviews</span>
             </div>
           </div>
 
           {/* Free Trial Text */}
-          <p className="text-gray-600 px-4">
+          <p className="text-slate-600 px-4">
             Try for Free! No credit card required.
           </p>
         </div>

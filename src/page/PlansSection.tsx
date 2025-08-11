@@ -53,32 +53,32 @@ export default function PlansSection() {
     const plans = activeTab === "monthly" ? monthlyPlans : yearlyPlans;
 
     return (
-        <section className="bg-gradient-to-b from-gray-50 to-white py-16 px-4">
+        <section className="bg-gradient-to-br from-slate-50 to-white py-16 px-4">
             {/* Heading */}
             <div className="text-center max-w-2xl mx-auto mb-10">
-                <h2 className="text-4xl font-bold mb-3">A Plan for Every Need 🚀</h2>
-                <p className="text-gray-600 text-lg">
+                <h2 className="text-4xl font-bold mb-3 text-slate-900">A Plan for Every Need 🚀</h2>
+                <p className="text-slate-600 text-lg">
                     Start with a Free trial and upgrade later
                 </p>
             </div>
 
             {/* Tabs */}
             <div className="flex justify-center mb-12">
-                <div className="bg-gray-100 rounded-full p-1 flex shadow-inner">
+                <div className="bg-slate-100 rounded-full p-1 flex shadow-lg backdrop-blur-sm">
                     <button
                         onClick={() => setActiveTab("monthly")}
-                        className={`flex items-center gap-2 px-6 py-2 rounded-full text-sm font-medium transition-all ${activeTab === "monthly"
-                            ? "bg-white shadow text-blue-600"
-                            : "text-gray-600 hover:text-blue-500"
+                        className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === "monthly"
+                            ? "bg-white shadow-md text-indigo-600"
+                            : "text-slate-600 hover:text-indigo-500"
                             }`}
                     >
                         <FaCalendarAlt /> Monthly
                     </button>
                     <button
                         onClick={() => setActiveTab("yearly")}
-                        className={`flex items-center gap-2 px-6 py-2 rounded-full text-sm font-medium transition-all ${activeTab === "yearly"
-                            ? "bg-white shadow text-blue-600"
-                            : "text-gray-600 hover:text-blue-500"
+                        className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === "yearly"
+                            ? "bg-white shadow-md text-indigo-600"
+                            : "text-slate-600 hover:text-indigo-500"
                             }`}
                     >
                         <FaCalendarAlt /> Yearly
@@ -91,28 +91,28 @@ export default function PlansSection() {
                 {plans.map((plan, index) => (
                     <div
                         key={index}
-                        className={`relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${plan.popular ? "ring-2 ring-blue-500" : ""
+                        className={`relative bg-white/90 backdrop-blur-sm border border-slate-200/60 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 ${plan.popular ? "ring-2 ring-indigo-500 shadow-indigo-200/50" : ""
                             }`}
                     >
                         {plan.popular && (
-                            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-full shadow-lg">
                                 Most Popular
                             </span>
                         )}
 
-                        <h3 className="text-xl font-semibold mb-4">{plan.name}</h3>
-                        <p className="text-4xl font-bold mb-2">{plan.price}</p>
-                        <p className="text-gray-500 mb-6">{plan.period}</p>
+                        <h3 className="text-xl font-semibold mb-4 text-slate-900">{plan.name}</h3>
+                        <p className="text-4xl font-bold mb-2 text-slate-900">{plan.price}</p>
+                        <p className="text-slate-500 mb-6">{plan.period}</p>
 
-                        <ul className="space-y-3 mb-6">
+                        <ul className="space-y-3 mb-8">
                             {plan.features.map((feature, i) => (
-                                <li key={i} className="flex items-center gap-2 text-gray-700">
-                                    <FaCheck className="text-green-500" /> {feature}
+                                <li key={i} className="flex items-center gap-3 text-slate-700">
+                                    <FaCheck className="text-emerald-500 flex-shrink-0" /> {feature}
                                 </li>
                             ))}
                         </ul>
 
-                        <button className="w-full bg-blue-600 text-white py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors">
+                        <button className="w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-3 rounded-xl font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
                             Choose Plan
                         </button>
                     </div>

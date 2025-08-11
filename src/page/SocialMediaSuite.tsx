@@ -58,9 +58,9 @@ export default function SocialMediaSuite() {
     const isTextLeft = activeTab % 2 === 0; // Alternate layout
 
     return (
-        <section className="py-12 bg-gray-50">
+        <section className="py-16 bg-gradient-to-br from-slate-50 to-white">
             {/* Heading */}
-            <h2 className="text-3xl font-bold text-center mb-8">
+            <h2 className="text-3xl font-bold text-center mb-8 text-slate-900">
                 Complete Suite for your Social Media Needs
             </h2>
 
@@ -70,9 +70,9 @@ export default function SocialMediaSuite() {
                     <button
                         key={index}
                         onClick={() => setActiveTab(index)}
-                        className={`px-6 py-2 rounded-full font-medium transition-all ${activeTab === index
-                            ? "bg-blue-600 text-white"
-                            : "bg-white border border-gray-300 text-gray-600 hover:bg-gray-100"
+                        className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeTab === index
+                            ? "bg-gradient-to-r from-indigo-600 to-blue-600 text-white shadow-lg"
+                            : "bg-white border border-slate-300 text-slate-600 hover:bg-slate-50 hover:border-slate-400"
                             }`}
                     >
                         {tab.name}
@@ -90,16 +90,16 @@ export default function SocialMediaSuite() {
                         }`}
                     key={`text-${activeTab}`}
                 >
-                    <h3 className="text-3xl font-semibold mb-4">{tabs[activeTab].name}</h3>
+                    <h3 className="text-3xl font-semibold mb-4 text-slate-900">{tabs[activeTab].name}</h3>
                     {tabs[activeTab].features.map((feature, idx) => (
                         <div
                             key={idx}
-                            className="p-5 bg-white rounded-xl shadow hover:shadow-lg transition"
+                            className="p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200/60"
                         >
-                            <h4 className="text-lg font-semibold text-gray-800">
+                            <h4 className="text-lg font-semibold text-slate-800">
                                 {feature.title}
                             </h4>
-                            <p className="text-gray-600">{feature.desc}</p>
+                            <p className="text-slate-600">{feature.desc}</p>
                         </div>
                     ))}
                 </div>
@@ -112,11 +112,11 @@ export default function SocialMediaSuite() {
                 >
                     {activeTab === 2 ? (
                         // Social Media Icons with random placement
-                        <div className="relative w-full h-[400px] bg-gray-50">
-                            {tabs[activeTab].icons.map((item, idx) => (
+                        <div className="relative w-full h-[400px] bg-gradient-to-br from-slate-50 to-white rounded-2xl">
+                            {tabs[activeTab].icons?.map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className={`absolute w-20 h-20 flex items-center justify-center rounded-full ${item.color} shadow-md hover:shadow-xl transition-all duration-300`}
+                                    className={`absolute w-20 h-20 flex items-center justify-center rounded-2xl ${item.color} shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110`}
                                     style={{
                                         top: `${Math.random() * 80 + 10}%`, // Random top position between 10% and 90%
                                         left: `${Math.random() * 80 + 10}%`, // Random left position between 10% and 90%
@@ -133,7 +133,7 @@ export default function SocialMediaSuite() {
                             {tabs[activeTab].images?.map((src, idx) => (
                                 <div
                                     key={idx}
-                                    className="overflow-hidden rounded-xl shadow hover:shadow-lg transition"
+                                    className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200/60"
                                 >
                                     <Image
                                         src={src}

@@ -59,12 +59,12 @@ const MarqueeAds = () => {
     }, [isPaused]);
 
     return (
-        <div className="relative overflow-hidden w-full bg-white py-6">
-            {/* Left Blur */}
-            <div className="absolute top-0 left-0 h-full w-12 z-10 pointer-events-none backdrop-blur-sm bg-gradient-to-r from-white/40 via-white/20 to-transparent" />
+        <div className="relative overflow-hidden w-full">
+            {/* Left Fade Layer */}
+            <div className="absolute top-0 left-0 h-full  w-44 z-10 pointer-events-none bg-gradient-to-r from-slate-50 via-slate-50/80 via-slate-50/40 to-transparent" />
 
-            {/* Right Blur */}
-            <div className="absolute top-0 right-0 h-full w-12 z-10 pointer-events-none backdrop-blur-sm bg-gradient-to-l from-white/40 via-white/20 to-transparent" />
+            {/* Right Fade Layer */}
+            <div className="absolute top-0 right-0 h-full w-44 z-10 pointer-events-none bg-gradient-to-l from-slate-50 via-slate-50/80 via-slate-50/40 to-transparent" />
 
             <div
                 ref={marqueeRef}
@@ -77,10 +77,10 @@ const MarqueeAds = () => {
                     <div
                         key={index}
                         className="
-              rounded-xl overflow-hidden shadow-lg bg-gray-200 
+              rounded-2xl overflow-hidden shadow-lg hover:shadow-xl bg-white border border-slate-200/60
               aspect-[9/13]
               w-[180px] sm:w-[250px] lg:w-[300px]
-              flex-shrink-0
+              flex-shrink-0 transition-all duration-300 hover:scale-105
             "
                     >
                         {item.type === "image" ? (

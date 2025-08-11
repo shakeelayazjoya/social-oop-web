@@ -12,26 +12,26 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-white border-t border-gray-200">
+        <footer className="bg-gradient-to-br from-slate-50 to-white border-t border-slate-200/60">
             {/* Top Section */}
-            <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center text-center lg:text-left">
+            <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center text-center lg:text-left">
                 <div>
-                    <h2 className="text-5xl font-semibold text-gray-900 leading-tight">
+                    <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-4 mx-auto">
                         Get started <br /> for free
                     </h2>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:items-start">
-                    <p className="text-gray-600 mb-4 max-w-lg">
+                    <p className="text-slate-600 mb-6 max-w-lg leading-relaxed">
                         Experience the power of AI to Create and Schedule ad creatives, social media content, videos. <br />
                         Ideate, Create and Schedule with Socialoop.ai
                     </p>
-                    <button className="px-6 py-3 w-fit rounded-lg text-white font-medium bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <button className="px-8 py-4 w-fit rounded-xl text-white font-medium bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                         Generate your first post
                     </button>
                 </div>
             </div>
 
-            <hr className="border-gray-200" />
+            <hr className="border-slate-200/60" />
 
             {/* Links Section */}
             <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm text-center md:text-left">
@@ -39,15 +39,12 @@ export default function Footer() {
                     {
                         title: "Use Cases",
                         links: [
-                            "Reels, TikToks and Video Ads",
                             "E-Commerce Product Videos",
                             "Instagram Post Maker",
                             "Text to Social Media Posts",
-                            "Shopify Products to Posts",
                             "Scheduling and Publishing",
                             "Social media Autopost",
                             "AI Ad Generator",
-                            "Social OOP for Enterprise"
                         ]
                     },
                     {
@@ -57,8 +54,6 @@ export default function Footer() {
                             "Color Palette Generator",
                             "Best Photo Picker",
                             "Video Thumbnail Picker",
-                            "Stock Image Search",
-                            "Background Color Changer"
                         ]
                     },
                     {
@@ -70,9 +65,6 @@ export default function Footer() {
                             "Contact Us",
                             "Privacy Policy",
                             "Terms & Conditions",
-                            "Become an Affiliate",
-                            "Success Stories",
-                            "API Documentation"
                         ]
                     },
                     {
@@ -81,50 +73,36 @@ export default function Footer() {
                             "Image & Video Editors",
                             "GPT-3 Copy Generators",
                             "Scheduling Tools",
-                            "Hashtags Generators"
                         ],
                         storeImages: true
                     }
                 ].map((col, i) => (
                     <div key={i}>
-                        <h3 className="font-semibold text-gray-900 mb-3">{col.title}</h3>
-                        <ul className="space-y-2 text-gray-600">
+                        <h3 className="font-semibold text-slate-900 mb-4">{col.title}</h3>
+                        <ul className="space-y-3 text-slate-600">
                             {col.links.map((link, idx) => (
                                 <li
                                     key={idx}
-                                    className="hover:text-purple-500 transition-colors duration-300 cursor-pointer relative group"
+                                    className="hover:text-indigo-600 transition-colors duration-300 cursor-pointer relative group"
                                 >
                                     <span className="relative inline-block">
                                         {link}
-                                        <span className="absolute left-0 -bottom-0.5 w-0 h-0.5 bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                                        <span className="absolute left-0 -bottom-0.5 w-0 h-0.5 bg-indigo-600 transition-all duration-300 group-hover:w-full"></span>
                                     </span>
                                 </li>
                             ))}
                         </ul>
 
-                        {col.storeImages && (
-                            <div className="space-y-3 mt-4 flex flex-col items-center md:items-start">
-                                <img
-                                    src="/appstore.svg"
-                                    alt="Download on App Store"
-                                    className="w-36 cursor-pointer hover:scale-105 transition-transform duration-300"
-                                />
-                                <img
-                                    src="/googleplay.svg"
-                                    alt="Download on Google Play"
-                                    className="w-36 cursor-pointer hover:scale-105 transition-transform duration-300"
-                                />
-                            </div>
-                        )}
+                       
                     </div>
                 ))}
             </div>
 
-            <hr className="border-gray-200" />
+            <hr className="border-slate-200/60" />
 
             {/* Bottom Section */}
-            <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 text-center">
-                <p>©2025 EZML Technologies Pvt. Ltd. All Rights Reserved.</p>
+            <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-slate-500 text-center">
+                <p>©2025  Socialoop.AI Pvt. Ltd. All Rights Reserved.</p>
 
                 {/* Social Links */}
                 <div className="flex space-x-3 mt-4 md:mt-0">
@@ -134,7 +112,7 @@ export default function Footer() {
                             <a
                                 key={idx}
                                 href="#"
-                                className={`p-2 rounded-full text-white transition-all duration-300 transform hover:scale-110 shadow-md ${s.color}`}
+                                className={`p-3 rounded-xl text-white transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl ${s.color}`}
                             >
                                 <Icon size={18} />
                             </a>

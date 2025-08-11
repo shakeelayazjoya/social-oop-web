@@ -34,36 +34,36 @@ export default function FAQSection() {
     };
 
     return (
-        <section className="bg-gray-50 py-16 px-6">
+        <section className="bg-gradient-to-br from-slate-50 to-white py-16 px-6">
             <div className="max-w-4xl mx-auto">
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
                         Frequently Asked Questions
                     </h2>
-                    <p className="mt-3 text-gray-600">
+                    <p className="mt-3 text-slate-600">
                         Everything you need to know about our services.
                     </p>
                 </div>
 
                 {/* FAQ List */}
-                <div className="space-y-4">
+                <div className="space-y-6">
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                            className="bg-white/90 backdrop-blur-sm border border-slate-200/60 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
-                                className="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none"
+                                className="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none"
                             >
-                                <span className="text-lg font-medium text-gray-900">
+                                <span className="text-lg font-medium text-slate-900">
                                     {faq.question}
                                 </span>
                                 {openIndex === index ? (
-                                    <FiChevronUp className="text-gray-500 text-2xl" />
+                                    <FiChevronUp className="text-slate-500 text-2xl transition-transform duration-200" />
                                 ) : (
-                                    <FiChevronDown className="text-gray-500 text-2xl" />
+                                    <FiChevronDown className="text-slate-500 text-2xl transition-transform duration-200" />
                                 )}
                             </button>
 
@@ -73,7 +73,7 @@ export default function FAQSection() {
                                     : "grid-rows-[0fr] opacity-0"
                                     }`}
                             >
-                                <div className="overflow-hidden px-6 pb-4 text-gray-600">
+                                <div className="overflow-hidden px-6 pb-5 text-slate-600">
                                     {faq.answer}
                                 </div>
                             </div>

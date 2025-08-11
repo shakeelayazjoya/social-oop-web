@@ -5,45 +5,46 @@ import { FaStar } from "react-icons/fa";
 const reviews = [
     {
         name: "John Doe",
-        image: "https://randomuser.me/api/portraits/men/32.jpg",
+        image: "https://i.pravatar.cc/150?img=32",
         review: "This platform completely transformed my business. Highly recommended!"
     },
     {
         name: "Sarah Smith",
-        image: "https://randomuser.me/api/portraits/women/45.jpg",
+        image: "https://i.pravatar.cc/150?img=45",
         review: "Amazing service! The team is super helpful and friendly."
     },
     {
         name: "Michael Johnson",
-        image: "https://randomuser.me/api/portraits/men/65.jpg",
+        image: "https://i.pravatar.cc/150?img=65",
         review: "Fast, reliable, and exactly what I needed for my project."
     },
     {
         name: "Emma Williams",
-        image: "https://randomuser.me/api/portraits/women/20.jpg",
+        image: "https://i.pravatar.cc/150?img=20",
         review: "Great experience! I’ll definitely be using it again."
     },
     {
         name: "David Brown",
-        image: "https://randomuser.me/api/portraits/men/12.jpg",
+        image: "https://i.pravatar.cc/150?img=12",
         review: "The quality exceeded my expectations. Five stars!"
     },
     {
         name: "Sophia Lee",
-        image: "https://randomuser.me/api/portraits/women/28.jpg",
+        image: "https://i.pravatar.cc/150?img=28",
         review: "Professional and quick service. Couldn’t ask for more!"
     },
     {
         name: "James Wilson",
-        image: "https://randomuser.me/api/portraits/women/29.jpg",
+        image: "https://i.pravatar.cc/150?img=55",
         review: "I was impressed with the attention to detail. Will recommend to others."
     }
 ];
 
+
 export default function ReviewSection() {
     return (
         <section className="py-12">
-            <div className="max-w-7xl mx-auto px-4 text-center">
+            <div className="w-full mx-auto px-4 text-center">
                 {/* Stars */}
                 <div className="flex justify-center gap-1 mb-2">
                     {[...Array(5)].map((_, i) => (

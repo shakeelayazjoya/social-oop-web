@@ -14,10 +14,10 @@ const images = [
 
 export default function SocialPostPage() {
     return (
-        <section className="bg-white py-12 px-4 overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-50 to-white py-16 px-4 overflow-hidden">
             {/* Heading */}
-            <div className="text-center max-w-3xl mx-auto mb-10">
-                <h2 className="text-3xl md:text-4xl font-bold leading-snug">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold leading-snug text-slate-900">
                     Loved ❤️ by more than a Million Entrepreneurs,
                     Marketers and Content Creators.
                 </h2>
@@ -25,11 +25,11 @@ export default function SocialPostPage() {
 
             {/* Scrollable Row */}
             <div className="overflow-x-auto overflow-y-hidden scrollbar-hide">
-                <div className="flex gap-4 pb-2">
+                <div className="flex gap-6 pb-4">
                     {images.map((src, idx) => (
                         <div
                             key={idx}
-                            className="flex-shrink-0 w-1/4 rounded-xl overflow-hidden shadow hover:scale-105 transition-transform duration-300 bg-gray-100"
+                            className="flex-shrink-0 w-1/4 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 bg-white border border-slate-200/60"
                         >
                             <Image
                                 src={src}
