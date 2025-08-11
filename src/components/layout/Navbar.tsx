@@ -7,18 +7,24 @@ import Link from 'next/link';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState({});
+    const [dropdownOpen, setDropdownOpen] = useState<Record<string, boolean>>({});
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
-    const toggleDropdown = (item) => {
+    const toggleDropdown = (item: string) => {
         setDropdownOpen((prev) => ({
             ...prev,
             [item]: !prev[item],
         }));
     };
 
-    const menuItems = [
+    type MenuItem = {
+        name: string;
+        href: string;
+        dropdown?: { name: string; href: string }[];
+    };
+
+    const menuItems: MenuItem[] = [
         // {
         //     name: 'Use Cases',
         //     href: '/use-cases',
