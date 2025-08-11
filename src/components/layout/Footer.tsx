@@ -34,7 +34,7 @@ export default function Footer() {
             <hr className="border-slate-200/60" />
 
             {/* Links Section */}
-            <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm text-center md:text-left">
+            <div className="max-w-7xl mx-auto px-10 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm text-center md:text-left">
                 {[
                     {
                         title: "Use Cases",
@@ -93,7 +93,7 @@ export default function Footer() {
                             ))}
                         </ul>
 
-                       
+
                     </div>
                 ))}
             </div>
