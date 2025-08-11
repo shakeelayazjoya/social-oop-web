@@ -56,7 +56,7 @@ export default function HomePage() {
               {/* CTA Button */}
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-0"
+                className="bg-gradient-to-r from-blue-500 to-pink-500 hover:from-blue-600 hover:to-pink-600 text-white font-semibold px-8 py-4 text-lg rounded-full"
               >
                 Generate your Ad!
               </Button>
