@@ -40,7 +40,6 @@ const reviews = [
     }
 ];
 
-
 export default function ReviewSection() {
     return (
         <section className="py-12">
@@ -73,6 +72,12 @@ export default function ReviewSection() {
                                 <h3 className="font-semibold text-lg text-gray-800">
                                     {review.name}
                                 </h3>
+                                {/* Stars BELOW the name */}
+                                <div className="flex justify-center gap-1 mt-1 mb-2">
+                                    {[...Array(5)].map((_, i) => (
+                                        <FaStar key={i} className="text-yellow-400 text-sm" />
+                                    ))}
+                                </div>
                                 <p className="text-gray-600 mt-2 text-sm">{review.review}</p>
                             </div>
                         ))}
@@ -95,6 +100,12 @@ export default function ReviewSection() {
                                 <h3 className="font-semibold text-lg text-gray-800">
                                     {review.name}
                                 </h3>
+                                {/* Stars BELOW the name */}
+                                <div className="flex justify-center gap-1 mt-1 mb-2">
+                                    {[...Array(5)].map((_, i) => (
+                                        <FaStar key={i} className="text-yellow-400 text-sm" />
+                                    ))}
+                                </div>
                                 <p className="text-gray-600 mt-2 text-sm">{review.review}</p>
                             </div>
                         ))}
@@ -104,29 +115,29 @@ export default function ReviewSection() {
 
             {/* Animations */}
             <style jsx>{`
-        .animate-marquee {
-          animation: marquee 25s linear infinite;
-        }
-        .animate-marquee-reverse {
-          animation: marquee-reverse 25s linear infinite;
-        }
-        @keyframes marquee {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        @keyframes marquee-reverse {
-          0% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0%);
-          }
-        }
-      `}</style>
+                .animate-marquee {
+                    animation: marquee 25s linear infinite;
+                }
+                .animate-marquee-reverse {
+                    animation: marquee-reverse 25s linear infinite;
+                }
+                @keyframes marquee {
+                    0% {
+                        transform: translateX(0%);
+                    }
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+                @keyframes marquee-reverse {
+                    0% {
+                        transform: translateX(-50%);
+                    }
+                    100% {
+                        transform: translateX(0%);
+                    }
+                }
+            `}</style>
         </section>
     );
 }
