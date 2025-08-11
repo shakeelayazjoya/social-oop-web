@@ -12,7 +12,7 @@ import { FaGoogle, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa"
 export default function HomePage() {
   return (
     <>
-      <main className="bg-gradient-to-br from-slate-50 via-white to-slate-100 py-16">
+      <main className="py-6">
         <div className="flex flex-col items-center text-center mx-auto">
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-4 max-w-[90%] mx-auto">
@@ -55,8 +55,7 @@ export default function HomePage() {
 
               {/* CTA Button */}
               <Button
-
-                className="bg-gradient-to-r from-blue-500 to-pink-500 hover:from-blue-600 hover:to-pink-600 text-white font-semibold px-8 py-4 text-lg rounded-full"
+                className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg font-medium shadow-md hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 hover:scale-105"
               >
                 Generate your Ad!
               </Button>
