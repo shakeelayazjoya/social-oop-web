@@ -20,8 +20,8 @@ export default function HomSection() {
                                 <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                             <div>
-                                <div className="text-[20px] sm:text-[22px] font-bold text-indigo-600">40%</div>
-                                <div className="text-sm sm:text-[15px] text-slate-700 font-medium">Savings in Cost</div>
+                                <div className="text-xl sm:text-2xl font-bold text-indigo-600">40%</div>
+                                <div className="text-base text-slate-700 font-medium">Savings in Cost</div>
                             </div>
                         </div>
 
@@ -37,8 +37,8 @@ export default function HomSection() {
                                 <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                             <div>
-                                <div className="text-[20px] sm:text-[22px] font-bold text-indigo-600">70%</div>
-                                <div className="text-sm sm:text-[15px] text-slate-700 font-medium">Reduction in Hours Spent</div>
+                                <div className="text-xl sm:text-2xl font-bold text-indigo-600">70%</div>
+                                <div className="text-base text-slate-700 font-medium">Reduction in Hours Spent</div>
                             </div>
                         </div>
 
@@ -55,8 +55,8 @@ export default function HomSection() {
                                 <circle cx="12" cy="9" r="2.5" />
                             </svg>
                             <div>
-                                <div className="text-[20px] sm:text-[22px] font-bold text-indigo-600">500K+</div>
-                                <div className="text-sm sm:text-[15px] text-slate-700 font-medium">Users Across Countries</div>
+                                <div className="text-xl sm:text-2xl font-bold text-indigo-600">500K+</div>
+                                <div className="text-base text-slate-700 font-medium">Users Across Countries</div>
                             </div>
                         </div>
 
@@ -72,13 +72,13 @@ export default function HomSection() {
                                 <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                             <div>
-                                <div className="text-[20px] sm:text-[22px] font-bold text-indigo-600">200M+</div>
-                                <div className="text-sm sm:text-[15px] text-slate-700 font-medium">Content Generated</div>
+                                <div className="text-xl sm:text-2xl font-bold text-indigo-600">200M+</div>
+                                <div className="text-base text-slate-700 font-medium">Content Generated</div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> 
 
             {/* Trusted Companies */}
             <section className="mt-10 px-4">
@@ -95,7 +95,7 @@ export default function HomSection() {
                     ].map((brand, idx) => (
                         <span
                             key={idx}
-                            className={`text-lg sm:text-xl text-slate-500 ${brand.style} transition-all duration-300 ease-in-out transform hover:scale-110 cursor-pointer hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 hover:text-transparent hover:bg-clip-text`}
+                            className={`text-lg text-slate-500 ${brand.style} transition-all duration-300 ease-in-out transform hover:scale-110 cursor-pointer hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 hover:text-transparent hover:bg-clip-text`}
                         >
                             {brand.name}
                         </span>

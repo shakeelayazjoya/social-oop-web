@@ -12,20 +12,20 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-gradient-to-br from-slate-50 to-white border-t border-slate-200/60">
+        <footer className="bg-gradient-to-br from-slate-50 to-white border-t border-slate-200/60 overflow-x-hidden">
             {/* Top Section */}
-            <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center text-center lg:text-left">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center text-center lg:text-left">
                 <div>
-                    <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-4 mx-auto">
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 mx-auto">
                         Get started <br /> for free
                     </h2>
                 </div>
                 <div className="flex flex-col justify-center items-center lg:items-start">
-                    <p className="text-slate-600 mb-6 max-w-lg leading-relaxed">
+                    <p className="text-base text-slate-600 mb-6 max-w-lg leading-relaxed">
                         Experience the power of AI to Create and Schedule ad creatives, social media content, videos. <br />
                         Ideate, Create and Schedule with Socialoop.ai
                     </p>
-                    <button className="px-8 py-4 w-fit rounded-xl text-white font-medium bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    <button className="px-8 py-4 w-fit rounded-xl text-base text-white font-medium bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                         Generate your first post
                     </button>
                 </div>
@@ -34,7 +34,7 @@ export default function Footer() {
             <hr className="border-slate-200/60" />
 
             {/* Links Section */}
-            <div className="max-w-7xl mx-auto px-10 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm text-center md:text-left">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-base text-center md:text-left">
                 {[
                     {
                         title: "Use Cases",
@@ -77,13 +77,13 @@ export default function Footer() {
                         storeImages: true
                     }
                 ].map((col, i) => (
-                    <div key={i}>
-                        <h3 className="font-semibold text-slate-900 mb-4">{col.title}</h3>
+                    <div key={i} className="min-w-0">
+                        <h3 className="text-lg font-semibold text-slate-900 mb-4">{col.title}</h3>
                         <ul className="space-y-3 text-slate-600">
                             {col.links.map((link, idx) => (
                                 <li
                                     key={idx}
-                                    className="hover:text-indigo-600 transition-colors duration-300 cursor-pointer relative group"
+                                    className="hover:text-indigo-600 transition-colors duration-300 cursor-pointer relative group break-words"
                                 >
                                     <span className="relative inline-block">
                                         {link}
@@ -101,7 +101,7 @@ export default function Footer() {
             <hr className="border-slate-200/60" />
 
             {/* Bottom Section */}
-            <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-slate-500 text-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row items-center justify-between text-base text-slate-500 text-center">
                 <p>©2025  Socialoop.AI Pvt. Ltd. All Rights Reserved.</p>
 
                 {/* Social Links */}

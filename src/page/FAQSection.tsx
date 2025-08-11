@@ -38,10 +38,10 @@ export default function FAQSection() {
             <div className="max-w-4xl mx-auto">
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900">
                         Frequently Asked Questions
                     </h2>
-                    <p className="mt-3 text-slate-600">
+                    <p className="mt-3 text-base text-slate-600">
                         Everything you need to know about our services.
                     </p>
                 </div>
@@ -57,13 +57,13 @@ export default function FAQSection() {
                                 onClick={() => toggleFAQ(index)}
                                 className="w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none"
                             >
-                                <span className="text-lg font-medium text-slate-900">
+                                <span className="text-lg font-semibold text-slate-900">
                                     {faq.question}
                                 </span>
                                 {openIndex === index ? (
-                                    <FiChevronUp className="text-slate-500 text-2xl transition-transform duration-200" />
+                                    <FiChevronUp className="text-slate-500 text-xl transition-transform duration-200" />
                                 ) : (
-                                    <FiChevronDown className="text-slate-500 text-2xl transition-transform duration-200" />
+                                    <FiChevronDown className="text-slate-500 text-xl transition-transform duration-200" />
                                 )}
                             </button>
 
@@ -73,7 +73,7 @@ export default function FAQSection() {
                                     : "grid-rows-[0fr] opacity-0"
                                     }`}
                             >
-                                <div className="overflow-hidden px-6 pb-5 text-slate-600">
+                                <div className="overflow-hidden px-6 pb-5 text-base text-slate-600">
                                     {faq.answer}
                                 </div>
                             </div>

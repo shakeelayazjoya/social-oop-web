@@ -60,7 +60,7 @@ export default function SocialMediaSuite() {
     return (
         <section className="py-16 bg-gradient-to-br from-slate-50 to-white">
             {/* Heading */}
-            <h2 className="text-3xl font-bold text-center mb-8 text-slate-900">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-slate-900">
                 Complete Suite for your Social Media Needs
             </h2>
 
@@ -70,7 +70,7 @@ export default function SocialMediaSuite() {
                     <button
                         key={index}
                         onClick={() => setActiveTab(index)}
-                        className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeTab === index
+                        className={`px-6 sm:px-8 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === index
                             ? "bg-gradient-to-r from-indigo-600 to-blue-600 text-white shadow-lg"
                             : "bg-white border border-slate-300 text-slate-600 hover:bg-slate-50 hover:border-slate-400"
                             }`}
@@ -82,7 +82,7 @@ export default function SocialMediaSuite() {
 
             {/* Content */}
             <div
-                className={`max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center`}
+                className={`px-8 mx-auto grid md:grid-cols-2 gap-10 items-center`}
             >
                 {/* Text Section */}
                 <div
@@ -90,7 +90,7 @@ export default function SocialMediaSuite() {
                         }`}
                     key={`text-${activeTab}`}
                 >
-                    <h3 className="text-3xl font-semibold mb-4 text-slate-900">{tabs[activeTab].name}</h3>
+                    <h3 className="text-xl md:text-2xl font-semibold mb-4 text-slate-900">{tabs[activeTab].name}</h3>
                     {tabs[activeTab].features.map((feature, idx) => (
                         <div
                             key={idx}
@@ -99,7 +99,7 @@ export default function SocialMediaSuite() {
                             <h4 className="text-lg font-semibold text-slate-800">
                                 {feature.title}
                             </h4>
-                            <p className="text-slate-600">{feature.desc}</p>
+                            <p className="text-base text-slate-600">{feature.desc}</p>
                         </div>
                     ))}
                 </div>
@@ -123,7 +123,7 @@ export default function SocialMediaSuite() {
                                         transform: `translate(-50%, -50%)`, // Center the icon
                                     }}
                                 >
-                                    <span className="text-white text-3xl">{item.icon}</span>
+                                    <span className="text-white text-2xl">{item.icon}</span>
                                 </div>
                             ))}
                         </div>

@@ -54,8 +54,8 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="px-6 py-3 bg-white/80 backdrop-blur-md border-b border-slate-200/60 sticky top-0 z-50">
-            <div className=" mx-auto flex justify-between items-center">
+        <nav className="px-4 sm:px-6 py-3 bg-white/80 backdrop-blur-md border-b border-slate-200/60 sticky top-0 z-50 overflow-x-hidden">
+            <div className="max-w-7xl mx-auto flex justify-between items-center">
                 {/* Logo */}
                 <div className="flex items-center">
                     <Link href="/">
@@ -79,7 +79,7 @@ const Navbar = () => {
                                     <>
                                         <button
                                             onClick={() => toggleDropdown(item.name)}
-                                            className="flex items-center text-slate-700 hover:text-slate-900 transition-all duration-300 relative font-medium
+                                            className="flex items-center text-base text-slate-700 hover:text-slate-900 transition-all duration-300 relative font-medium
                                        after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px]
                                        after:bg-gradient-to-r after:from-indigo-600 after:to-blue-600
                                        hover:after:w-full after:transition-all after:duration-300"
@@ -93,7 +93,7 @@ const Navbar = () => {
                                                     <Link
                                                         key={subItem.name}
                                                         href={subItem.href}
-                                                        className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-200"
+                                                        className="block px-4 py-2 text-base text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors duration-200"
                                                     >
                                                         {subItem.name}
                                                     </Link>
@@ -104,7 +104,7 @@ const Navbar = () => {
                                 ) : (
                                     <Link
                                         href={item.href}
-                                        className="text-slate-700 hover:text-slate-900 transition-all duration-300 relative font-medium
+                                        className="text-base text-slate-700 hover:text-slate-900 transition-all duration-300 relative font-medium
                                    after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px]
                                    after:bg-gradient-to-r after:from-indigo-600 after:to-blue-600
                                    hover:after:w-full after:transition-all after:duration-300"
@@ -121,12 +121,12 @@ const Navbar = () => {
                 {/* Desktop Buttons */}
                 <div className="hidden md:flex items-center space-x-4">
                     <Link href="/login">
-                        <button className="border-2 border-indigo-600 text-indigo-600 px-6 py-[6px] rounded-lg font-medium relative overflow-hidden transition-all duration-500 ease-out bg-gradient-to-r from-indigo-600 to-blue-600 bg-[length:0%_100%] bg-no-repeat hover:bg-[length:100%_100%] hover:text-white shadow-sm hover:shadow-md">
+                        <button className="border-2 border-indigo-600 text-base text-indigo-600 px-6 py-[6px] rounded-lg font-medium relative overflow-hidden transition-all duration-500 ease-out bg-gradient-to-r from-indigo-600 to-blue-600 bg-[length:0%_100%] bg-no-repeat hover:bg-[length:100%_100%] hover:text-white shadow-sm hover:shadow-md">
                             Login
                         </button>
                     </Link>
                     <Link href="/try-for-free">
-                        <button className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium bg-[length:100%_100%] hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
+                        <button className="bg-gradient-to-r from-indigo-600 to-blue-600 text-base text-white px-6 py-2 rounded-lg font-medium bg-[length:100%_100%] hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
                             Try for free
                         </button>
                     </Link>
@@ -171,7 +171,7 @@ const Navbar = () => {
                             ) : (
                                 <Link
                                     href={item.href}
-                                    className="block px-4 py-2 text-slate-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-blue-50 hover:text-slate-900 transition-all duration-300 rounded-lg"
+                                    className="block px-4 py-2 text-base text-slate-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-blue-50 hover:text-slate-900 transition-all duration-300 rounded-lg"
                                 >
                                     {item.name}
                                 </Link>

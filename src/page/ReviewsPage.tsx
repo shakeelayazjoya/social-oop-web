@@ -47,7 +47,7 @@ export default function ReviewSection() {
                 {/* Stars */}
                 <div className="flex justify-center gap-1 mb-2">
                     {[...Array(5)].map((_, i) => (
-                        <FaStar key={i} className="text-yellow-400 text-2xl" />
+                        <FaStar key={i} className="text-yellow-400 text-xl" />
                     ))}
                 </div>
 
@@ -69,16 +69,16 @@ export default function ReviewSection() {
                                     alt={review.name}
                                     className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
                                 />
-                                <h3 className="font-semibold text-lg text-gray-800">
+                                <h3 className="text-lg font-semibold text-gray-800">
                                     {review.name}
                                 </h3>
                                 {/* Stars BELOW the name */}
                                 <div className="flex justify-center gap-1 mt-1 mb-2">
                                     {[...Array(5)].map((_, i) => (
-                                        <FaStar key={i} className="text-yellow-400 text-sm" />
+                                        <FaStar key={i} className="text-yellow-400 text-base" />
                                     ))}
                                 </div>
-                                <p className="text-gray-600 mt-2 text-sm">{review.review}</p>
+                                <p className="text-gray-600 mt-2 text-base">{review.review}</p>
                             </div>
                         ))}
                     </div>
@@ -97,16 +97,16 @@ export default function ReviewSection() {
                                     alt={review.name}
                                     className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
                                 />
-                                <h3 className="font-semibold text-lg text-gray-800">
+                                <h3 className="text-lg font-semibold text-gray-800">
                                     {review.name}
                                 </h3>
                                 {/* Stars BELOW the name */}
                                 <div className="flex justify-center gap-1 mt-1 mb-2">
                                     {[...Array(5)].map((_, i) => (
-                                        <FaStar key={i} className="text-yellow-400 text-sm" />
+                                        <FaStar key={i} className="text-yellow-400 text-base" />
                                     ))}
                                 </div>
-                                <p className="text-gray-600 mt-2 text-sm">{review.review}</p>
+                                <p className="text-gray-600 mt-2 text-base">{review.review}</p>
                             </div>
                         ))}
                     </div>

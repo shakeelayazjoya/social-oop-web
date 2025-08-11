@@ -17,14 +17,14 @@ export default function SocialPostPage() {
         <section className="bg-gradient-to-br from-slate-50 to-white py-16 px-4 overflow-hidden">
             {/* Heading */}
             <div className="text-center max-w-3xl mx-auto mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold leading-snug text-slate-900">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug text-slate-900">
                     Loved ❤️ by more than a Million Entrepreneurs,
                     Marketers and Content Creators.
                 </h2>
             </div>
 
             {/* Scrollable Row */}
-            <div className="overflow-x-auto overflow-y-hidden scrollbar-hide">
+            <div className="overflow-x-auto overflow-y-hidden" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                 <div className="flex gap-6 pb-4">
                     {images.map((src, idx) => (
                         <div

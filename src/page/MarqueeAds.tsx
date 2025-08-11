@@ -61,7 +61,7 @@ const MarqueeAds = () => {
     return (
         <div className="relative overflow-hidden w-full">
             {/* Left Fade Layer */}
-            <div className="absolute top-0 left-0 h-full  w-44 z-10 pointer-events-none bg-gradient-to-r from-slate-50 via-slate-50/80 via-slate-50/40 to-transparent" />
+            <div className="absolute top-0 left-0 h-full w-44 z-10 pointer-events-none bg-gradient-to-r from-slate-50 via-slate-50/80 via-slate-50/40 to-transparent" />
 
             {/* Right Fade Layer */}
             <div className="absolute top-0 right-0 h-full w-44 z-10 pointer-events-none bg-gradient-to-l from-slate-50 via-slate-50/80 via-slate-50/40 to-transparent" />

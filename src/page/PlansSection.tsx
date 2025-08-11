@@ -56,8 +56,8 @@ export default function PlansSection() {
         <section className="bg-gradient-to-br from-slate-50 to-white py-16 px-4">
             {/* Heading */}
             <div className="text-center max-w-2xl mx-auto mb-10">
-                <h2 className="text-4xl font-bold mb-3 text-slate-900">A Plan for Every Need 🚀</h2>
-                <p className="text-slate-600 text-lg">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-slate-900">A Plan for Every Need 🚀</h2>
+                <p className="text-base text-slate-600">
                     Start with a Free trial and upgrade later
                 </p>
             </div>
@@ -67,7 +67,7 @@ export default function PlansSection() {
                 <div className="bg-slate-100 rounded-full p-1 flex shadow-lg backdrop-blur-sm">
                     <button
                         onClick={() => setActiveTab("monthly")}
-                        className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === "monthly"
+                        className={`flex items-center gap-2 px-6 py-3 rounded-full text-base font-medium transition-all duration-300 ${activeTab === "monthly"
                             ? "bg-white shadow-md text-indigo-600"
                             : "text-slate-600 hover:text-indigo-500"
                             }`}
@@ -76,7 +76,7 @@ export default function PlansSection() {
                     </button>
                     <button
                         onClick={() => setActiveTab("yearly")}
-                        className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === "yearly"
+                        className={`flex items-center gap-2 px-6 py-3 rounded-full text-base font-medium transition-all duration-300 ${activeTab === "yearly"
                             ? "bg-white shadow-md text-indigo-600"
                             : "text-slate-600 hover:text-indigo-500"
                             }`}
@@ -95,24 +95,24 @@ export default function PlansSection() {
                             }`}
                     >
                         {plan.popular && (
-                            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-xs font-semibold px-4 py-2 rounded-full shadow-lg">
+                            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg">
                                 Most Popular
                             </span>
                         )}
 
                         <h3 className="text-xl font-semibold mb-4 text-slate-900">{plan.name}</h3>
-                        <p className="text-4xl font-bold mb-2 text-slate-900">{plan.price}</p>
-                        <p className="text-slate-500 mb-6">{plan.period}</p>
+                        <p className="text-2xl md:text-3xl font-bold mb-2 text-slate-900">{plan.price}</p>
+                        <p className="text-base text-slate-500 mb-6">{plan.period}</p>
 
                         <ul className="space-y-3 mb-8">
                             {plan.features.map((feature, i) => (
-                                <li key={i} className="flex items-center gap-3 text-slate-700">
+                                <li key={i} className="flex items-center gap-3 text-base text-slate-700">
                                     <FaCheck className="text-emerald-500 flex-shrink-0" /> {feature}
                                 </li>
                             ))}
                         </ul>
 
-                        <button className="w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-3 rounded-xl font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                        <button className="w-full bg-gradient-to-r from-indigo-600 to-blue-600 text-base text-white py-3 rounded-xl font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
                             Choose Plan
                         </button>
                     </div>
