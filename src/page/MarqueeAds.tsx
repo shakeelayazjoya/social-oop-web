@@ -3,18 +3,19 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const items = [
-    { type: "image", src: "https://picsum.photos/seed/pic1/400/250", alt: "Ad Image 1" },
-    { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4" },
-    { type: "image", src: "https://picsum.photos/seed/pic2/400/250", alt: "Ad Image 2" },
-    { type: "video", src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4" },
-    { type: "image", src: "https://picsum.photos/seed/pic3/400/250", alt: "Ad Image 3" },
-    { type: "image", src: "https://picsum.photos/seed/pic4/400/250", alt: "Ad Image 4" },
-    { type: "video", src: "https://samplelib.com/lib/preview/mp4/sample-10s.mp4" },
-    { type: "image", src: "https://picsum.photos/seed/pic5/400/250", alt: "Ad Image 5" },
-    { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4" },
-    { type: "image", src: "https://picsum.photos/seed/pic6/400/250", alt: "Ad Image 6" },
-    { type: "video", src: "https://samplelib.com/lib/preview/mp4/sample-15s.mp4" },
+    { type: "image", src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&h=250&q=80", alt: "AI Robotics" },
+    { type: "image", src: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=400&h=250&q=80", alt: "Social Media Marketing" },
+    { type: "image", src: "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=400&h=250&q=80", alt: "Influencer Content" },
+    { type: "image", src: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&h=250&q=80", alt: "Digital Networking" },
+    { type: "image", src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&h=250&q=80", alt: "Futuristic AI" },
+    { type: "image", src: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=400&h=250&q=80", alt: "Smartphone Social Apps" },
+    { type: "image", src: "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?auto=format&fit=crop&w=400&h=250&q=80", alt: "Machine Learning" },
+    { type: "image", src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=400&h=250&q=80", alt: "Augmented Reality" },
+    { type: "image", src: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=400&h=250&q=80", alt: "Tech Innovation" },
 ];
+
+
+
 
 const MarqueeAds = () => {
     const marqueeRef = useRef<HTMLDivElement>(null);
